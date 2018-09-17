@@ -1,14 +1,21 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Carteira de Vacinação Virtual
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="mymenu">
+    <ion-row>
+      <ion-col><button ion-button class="menu-button" (tap)="openVacinas()" >Vacinas</button></ion-col>
+      <ion-col><button ion-button class="menu-button" >Registrar<br>vacina</button></ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col><button ion-button class="menu-button" (tap)="openPerfil()" >Dados<br>pessoais</button></ion-col>
+      <ion-col><button ion-button class="menu-button" (tap)="openAjuda()" >Ajuda</button></ion-col>
+    </ion-row>
+  </div>
 </ion-content>

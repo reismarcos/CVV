@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ vacina.name }}</ion-title>
+    <ion-buttons end> <!-- // for button to be positioned right -->
+      <button ion-button icon-only (click)="onTrash()" *ngIf="!newVacinaFlag" > <!-- *ngIf="product.id"-->  
+      <!-- show trash button only if its existing note -->
+        <ion-icon name="trash"></ion-icon>
+      </button>    
+    </ion-buttons>        
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Nome da vacina</ion-label>
+      <ion-input type="text" [(ngModel)]="vacina.name" value="" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Data da aplicação</ion-label>
+      <ion-datetime type="text" [(ngModel)]="vacina.date" required></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Local</ion-label>
+      <ion-input type="text" [(ngModel)]="vacina.place" value="" required></ion-input>    
+    </ion-item>    
+  </ion-list>  
+</ion-content>

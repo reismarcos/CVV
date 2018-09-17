@@ -1,3 +1,23 @@
 page-home {
-
+    .menu-button{
+        width:120px;
+        height:100px;
+        background-color:#fff ;
+        border: 1px solid #374b8a;
+        color:#374b8a;
+        border-radius: 20px;   
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;               
+    }
+    
+    .mymenu{
+        text-align: center;
+        padding-top:10px;
+        background:#fff;
+    }
+    
+    .mymenu ion-col {
+        padding-bottom: 20px;
+    }
 }
