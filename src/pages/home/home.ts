@@ -3,6 +3,8 @@ import { NavController } from 'ionic-angular';
 import { PerfilPage } from '../perfil/perfil';
 import { AjudaPage } from '../ajuda/ajuda';
 import { VacinasPage } from '../vacinas/vacinas';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { AuthService } from '../../app/auth.service'; 
 
 
 
@@ -15,7 +17,7 @@ import { VacinasPage } from '../vacinas/vacinas';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,db: AngularFireDatabase,  private authService: AuthService) {
     this.navCtrl=navCtrl;
   }
 
@@ -34,6 +36,11 @@ export class HomePage {
       vacinaParam : vacina
     });             
   } 
+
+  logout(){
+    this.authService.logout();
+    this.navCtrl.setRoot('LoginPage');
+  }
 
 
 }

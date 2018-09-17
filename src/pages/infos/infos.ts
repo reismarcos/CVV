@@ -39,14 +39,14 @@ export class Infos {
 
   onTrash(){
     let confirm = this.alertCtrl.create({
-    title: 'Delete?',
-    message: `Are you sure you want to delete this vacina: "${this.vacina.title}?"`, // use backtick to insert string desc
+    title: 'Excluir?',
+    message: `Você tem certeza que deseja excluir essa vacina da sua Carteira de Vacinação Virutal?`, // use backtick to insert string desc
     buttons: [
       {
-        text: 'Cancel' // don't do anything when cancel
+        text: 'Cancelar' // don't do anything when cancel
       },
       {
-        text: 'Confirm',
+        text: 'Confirmar',
         handler: () => {
         //this.noteService.removeNote(this.note);
         this.deleteVacinaFlag = true;
