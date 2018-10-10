@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
+import { AuthService } from '../../app/auth.service'; 
 /**
  * Generated class for the PerfilPage page.
  *
@@ -14,12 +15,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'perfil.html',
 })
 export class PerfilPage {
+  userId;
+  constructor(public navCtrl: NavController, private authService: AuthService) {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PerfilPage');
+  }
+
+  logout(){
+    this.authService.logout();
+    this.navCtrl.setRoot('LoginPage');
   }
 
 }

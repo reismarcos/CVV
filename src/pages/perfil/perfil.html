@@ -1,11 +1,17 @@
-<ion-header>   
-    <ion-navbar> 
-      <h1>Perfil</h1>
-    </ion-navbar>
-  </ion-header>
+
+  <ion-header>   
+      <ion-navbar> 
+        <h1>Perfil</h1>
+        <ion-buttons class="bt-sair" end>
+            <button ion-button (click)="logout()">
+            Sair <ion-icon class="icon-sair" name="log-out"></ion-icon>
+            </button>
+          </ion-buttons>
+      </ion-navbar>
+    </ion-header>
 
 
-<ion-content class="pag-dados" padding>
+<ion-content class="pag-dados" no-scroll padding>
   <ion-card>
     <p><span class="titulo">Nome: </span>Antonio Carlos Moura Silva</p>
     <p><span class="titulo">Data de nascimento: </span>20/04/1987</p>
