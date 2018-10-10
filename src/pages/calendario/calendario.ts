@@ -13,7 +13,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-calendario',
   templateUrl: 'calendario.html',
 })
-export class CalendarioPage {
+export class CalendarioPage{
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -21,5 +22,6 @@ export class CalendarioPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad CalendarioPage');
   }
+
 
 }

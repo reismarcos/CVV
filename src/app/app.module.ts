@@ -10,6 +10,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from './auth.service';
 
+import { AccordionComponent } from '../components/accordion/accordion';
+
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -38,6 +40,7 @@ export const firebaseConfig = {
     AjudaPage,
     VacinasPage,
     CalendarioPage,
+    AccordionComponent,
   ],
   imports: [
     BrowserModule,
