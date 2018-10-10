@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { VacinaService } from '../../app/vacina.service';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { AuthService } from '../../app/auth.service';
+
 
 
 /**
@@ -18,29 +20,32 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class VacinasPage {
   vacinas;
-  constructor(public navCtrl: NavController, private vacinaService: VacinaService, db:AngularFireDatabase) {
+  userId;
+  constructor(public navCtrl: NavController, private vacinaService: VacinaService, db:AngularFireDatabase, private authService: AuthService) {
     console.log(db);
   }
     
 
   ngOnInit(){
-    this.vacinas = this.vacinaService.fetchVacinas();
+    this.authService.getCurrentUser().subscribe(authState => {
+      this.userId = authState.uid;
+      this.vacinas = this.vacinaService.fetchVacinas(this.userId);
+    });
+      
   }
   
 
   onItemClick(vacina){
     this.navCtrl.push('Infos',{
-      vacinaParam : vacina // key value pair
+      vacinaParam : vacina,
+      userId : this.userId, // key value pair
     } );
   }
 
   onAddClick(){
-    this.navCtrl.push('Infos'); // for add, don’t pass in any parameters.
+    this.navCtrl.push('Infos',{
+      userId : this.userId
+    }); // for add, don’t pass in any parameters.
   }
 
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad VacinasPage');
-  }
-  
 }

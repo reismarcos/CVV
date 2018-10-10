@@ -16,14 +16,16 @@ import { HomePage } from '../pages/home/home';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { AjudaPage } from '../pages/ajuda/ajuda';
 import { VacinasPage } from '../pages/vacinas/vacinas';
+import { CalendarioPage } from '../pages/calendario/calendario';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCWgW3m-8CvgRmeaTiq_yDyFYn5575C9lE",
-    authDomain: "carteira-de-vacinacao-virtual.firebaseapp.com",
-    databaseURL: "https://carteira-de-vacinacao-virtual.firebaseio.com",
-    projectId: "carteira-de-vacinacao-virtual",
-    storageBucket: "",
-    messagingSenderId: "784482572227"
+  authDomain: "carteira-de-vacinacao-virtual.firebaseapp.com",
+  databaseURL: "https://carteira-de-vacinacao-virtual.firebaseio.com",
+  projectId: "carteira-de-vacinacao-virtual",
+  storageBucket: "carteira-de-vacinacao-virtual.appspot.com",
+  messagingSenderId: "784482572227"
 };
   
 
@@ -35,6 +37,7 @@ export const firebaseConfig = {
     PerfilPage,
     AjudaPage,
     VacinasPage,
+    CalendarioPage,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ export const firebaseConfig = {
     PerfilPage,
     AjudaPage,
     VacinasPage,
+    CalendarioPage,
   ],
   providers: [
     StatusBar,

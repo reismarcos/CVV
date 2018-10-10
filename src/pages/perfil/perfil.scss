@@ -1,3 +1,43 @@
 page-perfil {
+    .pag-dados{
+        background-color:#eee;
+    }
 
+    ion-card{
+        padding:15px;
+        margin:-15px;
+    }
+
+    .titulo{
+        font-size:15px;
+        color:#2a3b71;
+        font-weight: bold;
+    }
+
+    p{
+        font-size:15px;
+        margin-bottom: 10px !important;
+        color:#3e3e3e !important;
+    }
+
+    .btn-editar{
+        background-color: #008CBA;
+        color: white;
+        padding: 15px 40px;
+        text-align: center !important;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        font-family: 'Montserrat', sans-serif;
+        border-radius:5px;
+        margin-top: 7px;
+    }
+
+    .btn-position{
+        text-align:center;
+    }
+
+    ion-app.md [padding] .scroll-content {
+        padding: 0px !important;
+    }
 }

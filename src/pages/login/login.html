@@ -1,25 +1,26 @@
-<ion-header>
-  <ion-navbar>
-  <ion-title>login</ion-title>
-  <ion-buttons end>
-    <button ion-button (tap)="signUp()">
-    Sign Up
-    </button>
-    </ion-buttons>
-  </ion-navbar>
+<ion-header class="mynav">
+    <div class="pos-logo">
+    <img src="../../assets/imgs/logo-CIVa.png">
+    </div>
 </ion-header>
 
-<ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text" [(ngModel)]="username" ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="password"></ion-input>
-    </ion-item>
-  </ion-list>
-  <button ion-button (tap)="signIn()">Login</button>
+<ion-content padding class="no-scroll" class="pg-login">
+  <div class="box-login">
 
+    <div class="pos-input">
+      <ion-icon name="md-person" class="icon-person"></ion-icon>
+      <input  placeholder=Email type="text" [(ngModel)]="username" >
+    </div>
+
+    <div class="pos-input">
+      <ion-icon name="md-lock" class="icon-person"></ion-icon>
+      <input placeholder=Senha type="password" [(ngModel)]="password">
+    </div>
+
+    <br> 
+    <button  (tap)="signIn()">Login</button>
+    <br>
+    <button  (tap)="signUp()">Criar conta</button>
+    
+  </div>
 </ion-content>

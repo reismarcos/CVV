@@ -1,25 +1,21 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Vacinas</ion-title>
-  </ion-navbar>
-
-</ion-header>
+<ion-header>   
+    <ion-navbar> 
+      <h1>Vacinas</h1>
+    </ion-navbar>
+  </ion-header>
 
 <ion-content padding>
+    <ion-searchbar></ion-searchbar>
+
   <ion-card *ngFor="let vacina of vacinas | async" (tap)="onItemClick(vacina)"> <!-- ion-item -->
-    <ion-card-header>
-      {{ vacina.date | date }} 
-    </ion-card-header>    
-    <ion-card-content>
-      <ion-card-title>
-        {{ vacina.name }}
-      </ion-card-title>
-      <p>
-        {{ vacina.place }}
-      </p>
-    </ion-card-content>
+    <ion-item>
+      <ion-icon name="ios-checkmark-circle" class="ios-checkmark-circle" item-start large></ion-icon>
+      <h2>{{ vacina.name }}</h2>
+      <p><ion-icon  name="md-calendar" class="md-calendar"></ion-icon> {{ vacina.date | date }} </p>
+      <p><ion-icon name="md-pin" class="md-pin"></ion-icon>{{ vacina.place }}</p>
+    </ion-item>
   </ion-card> 
+
   <ion-fab right bottom>
     <button ion-fab color="primary" (tap)="onAddClick()">
       <ion-icon name="add"></ion-icon>

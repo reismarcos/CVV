@@ -14,3 +14,89 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.mynav{
+    background-color: #2a3b71;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.mynav h1{
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+.mynav h2{
+    font-size: 1em;
+    text-align: center;
+    color:#fff;
+}
+
+ion-navbar h1{
+    color:rgba(91, 129, 191, 1) !important;
+    font-size:1.5em;
+    padding-bottom: 10px;  
+    padding-left:12%;   
+}
+ion-navbar{
+    padding:0px;
+}
+
+.pos-logo{
+    text-align: center;
+}
+
+.menu-button{
+    width:120px;
+    height:100px;
+    background-color:#fff ;
+    border: 1px solid #374b8a;
+    color:#374b8a;
+    border-radius: 20px;   
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;               
+}
+
+.mymenu{
+    text-align: center;
+    padding-top:10px;
+    background:#fff;
+}
+
+.mymenu ion-col {
+    padding-bottom: 20px;
+}
+
+.nome-menu{
+    margin:0px !important;
+    margin-bottom: 10px !important;
+    color:#2a3b71;
+}
+
+.pos-bt-logout{
+    margin-top:30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.pos-bt-logout button{
+    background: rgb(167, 2, 2);
+    color:#fff;
+    width:100%;
+}
+
+ion-navbar h1 {
+    color: #5b81bf !important;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    padding-left: 12%;
+}

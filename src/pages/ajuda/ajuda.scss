@@ -1,3 +1,23 @@
 page-ajuda {
+    .pag-info{
+        text-align: center;
+    }
+    .logo-info{
+        width:234px;
+        background-color:#fff;
+        height:89px;
+    }
 
+    .titulo{
+        font-size:15px;
+        color:#2a3b71;
+        font-weight: bold;
+    }
+
+    p{
+        text-align: left !important;
+        font-size:15px;
+        margin-bottom: 10px !important;
+        color:#3e3e3e !important;
+    }
 }

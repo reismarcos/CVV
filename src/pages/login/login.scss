@@ -1,3 +1,82 @@
 page-login {
+    .scroll-content {
+        overflow-y: hidden;
+    }
+    
+    .logo-login{
+        padding-bottom: 10px;
+        padding-top:30px;
+    }
+    .pg-login{
+        background-color:#2a3b71;
+    }
 
+    h2{
+        color:#fff;
+        font-family: 'Montserrat' !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .box-login{
+        padding:20px;
+        padding-top:0px !important;
+    }
+
+    .box-login input{
+        border:0;
+        background: #2a3b71;
+        color:#fff;  
+        margin-left:10px; 
+        font-family: 'Roboto', sans-serif;
+        font-size:15px;
+    }
+
+    .box-login button{
+        border:1px solid #fff;
+        background: #2a3b71;
+        color:#fff;
+        padding-top: 20px;
+        padding-bottom:20px;
+        margin-top:0px;
+        margin-bottom: 15px;
+        width:100%;
+        font-size:14px;
+        border-radius:5px;
+        font-family: 'Montserrat' !important;
+    }
+    .pos-input{
+        border:1px solid #fff;
+        background-color: #2a3b71;
+        color:#fff;
+        width: 100%;
+        margin-bottom:15px;     
+        padding-top:10px;
+        padding-left:10px;
+        padding-bottom:10px;  
+        border-top:0;
+        border-left:0;
+        border-right:0;
+        margin-top:15px;
+        display: inline-block !important;
+    }
+    .icon-person{
+        color:#fff;
+    }
+
+    .titulo-nav{
+        text-align: center;
+        color:#fff !important;
+        padding-top:10px;
+        padding-bottom: 10px; 
+    }
+
+    .toolbar-title-md{
+        color:#fff !important;
+    }
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color:#2a3b71 !important;
+    background-image: none !important;
+    color:#fff !important;
+}
 }

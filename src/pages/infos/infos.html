@@ -1,11 +1,7 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>{{ vacina.name }}</ion-title>
-    <ion-buttons end> <!-- // for button to be positioned right -->
-      <button ion-button icon-only (click)="onTrash()" *ngIf="!newVacinaFlag" > <!-- *ngIf="product.id"-->  
-      <!-- show trash button only if its existing note -->
-        <ion-icon name="trash"></ion-icon>
-      </button>    
+      <h1>Vacinas</h1>
+      <ion-buttons end><button ion-button icon-only (click)="onTrash()" *ngIf="!newVacinaFlag" ><ion-icon name="trash"></ion-icon></button>    
     </ion-buttons>        
   </ion-navbar>
 </ion-header>
@@ -14,18 +10,37 @@
 <ion-content padding>
   <ion-list>
     <ion-item>
-      <ion-label fixed>Nome da vacina</ion-label>
-      <ion-input type="text" [(ngModel)]="vacina.name" value="" required></ion-input>
+      <ion-label fixed>Nome</ion-label><br>
+      <ion-select type="text" [(ngModel)]="vacina.name">
+        <ion-option value="BCG">BCG</ion-option>
+        <ion-option value="Hepatite B">Hepatite B</ion-option>
+        <ion-option value="Penta/DTP">Penta/DTP</ion-option>
+        <ion-option value="VIP/VOP">VIP/VOP</ion-option>
+        <ion-option value="Pneumocócia 10V">Pneumocócia 10V</ion-option>
+        <ion-option value="Rotavírus">Rotavírus</ion-option>
+        <ion-option value="Meningocócia C">Meningocócia C</ion-option>
+        <ion-option value="Febre Amarela">Febre Amarela</ion-option>
+        <ion-option value="Hepatite A">Hepatite A</ion-option>
+        <ion-option value="Tríplice viral">Tríplice viral</ion-option>
+        <ion-option value="Tetra viral">Tetra viral</ion-option>
+        <ion-option value="Varicela">Varicela</ion-option>
+        <ion-option value="HPV">HPV</ion-option>
+        <ion-option value="Pneumocócia 23V">Pneumocócia 23V</ion-option>
+        <ion-option value="Dupla adulto">Dupla adulto</ion-option>
+        <ion-option value="dTpa">dTpa</ion-option>
+      </ion-select>
     </ion-item>
 
     <ion-item>
-      <ion-label fixed>Data da aplicação</ion-label>
-      <ion-datetime type="text" [(ngModel)]="vacina.date" required></ion-datetime>
+      <ion-label fixed>Data</ion-label><br>
+      <ion-datetime displayFormat="DD/MM/YYYY" type="text" [(ngModel)]="vacina.date" required></ion-datetime>
     </ion-item>
 
     <ion-item>
-      <ion-label fixed>Local</ion-label>
-      <ion-input type="text" [(ngModel)]="vacina.place" value="" required></ion-input>    
+      <ion-label fixed>Local</ion-label><br>
+      <ion-input type="text" [(ngModel)]="vacina.place"  required></ion-input>    
     </ion-item>    
-  </ion-list>  
+  </ion-list>
+  <ion-col><button ion-button class="btn-save" (tap)="saveVacina()" >Salvar</button></ion-col>
+  
 </ion-content>

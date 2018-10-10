@@ -1,26 +1,29 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Carteira de Vacinação Virtual
-    </ion-title>
-    <ion-buttons end>
-      <button ion-button (click)="logout()">
-      Logout
-      </button>
-      </ion-buttons>
-  </ion-navbar>
+<ion-header class="mynav">    
+    <div class="pos-logo">
+      <img src="../../assets/imgs/logo-CIVa.png">
+    </div>
 </ion-header>
+
+
+
+
+
 
 <ion-content padding>
   <div class="mymenu">
     <ion-row>
       <ion-col><button ion-button class="menu-button" (tap)="openVacinas()" >Vacinas</button></ion-col>
-      <ion-col><button ion-button class="menu-button" >Registrar<br>vacina</button></ion-col>
+      <ion-col><button ion-button class="menu-button" (tap)="openCalendario()">Calendário <br>de Vacinação</button></ion-col>
     </ion-row>
     
     <ion-row>
       <ion-col><button ion-button class="menu-button" (tap)="openPerfil()" >Dados<br>pessoais</button></ion-col>
       <ion-col><button ion-button class="menu-button" (tap)="openAjuda()" >Ajuda</button></ion-col>
     </ion-row>
+
+    <div class="pos-bt-logout">
+      <button ion-button (click)="logout()">Sair</button>
+    </div>
+    
   </div>
 </ion-content>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { VacinaService } from '../../app/vacina.service';
+import { VacinasPage } from '../vacinas/vacinas';
 
 
 
@@ -17,14 +18,18 @@ import { VacinaService } from '../../app/vacina.service';
   templateUrl: 'infos.html',
 })
 export class Infos {
-
+  userId;
   vacina;
   newVacinaFlag = false;
   deleteVacinaFlag = false;
+  myDate: String = new Date().toISOString();
+
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private vacinaService: VacinaService, private alertCtrl: AlertController) {
     this.vacina = this.navParams.get('vacinaParam');
+    this.userId = this.navParams.get('userId');
+    this.myDate = new Date().toISOString();
 
     if(!this.vacina){
       this.vacina = {
@@ -64,16 +69,23 @@ export class Infos {
     if(this.vacina.title === "" && this.vacina.date === "" && this.vacina.place === ""){      
       // if note is blank don't do anything      
     }
-    else if(this.newVacinaFlag){
-      this.vacinaService.addVacina(this.vacina);      
-    }
+    
     else if(this.deleteVacinaFlag){
-      this.vacinaService.removeVacina(this.vacina);
+      this.vacinaService.removeVacina(this.vacina,this.userId);
       console.log("delete vacina");
     }
       
-    else{
-      
+    
+  }
+
+ 
+  saveVacina(){
+    if(this.newVacinaFlag){
+      this.vacinaService.addVacina(this.vacina,this.userId);
     }
+    else{
+      this.vacinaService.editVacina(this.vacina,this.userId);
+    }
+    this.navCtrl.pop();      
   }
 }
