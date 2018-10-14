@@ -1,20 +1,35 @@
-<ion-header>
-  <ion-navbar>
-    <h1>Criar conta</h1>
-  </ion-navbar>
+<ion-header class="mynav">
+  <div class="pos-logo">
+  <img src="../../assets/imgs/logo-CIVa.png">
+  </div>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="no-scroll">
   <ion-list>
     <ion-item>
-      <ion-label floating>Username</ion-label>
+      <ion-label class="my-label" stacked>Nome</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
       <ion-input type="text" [(ngModel)]="username"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Password</ion-label>
+      <ion-label stacked>Endereço</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Telefone</ion-label>
+      <ion-input type="phone-number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Senha</ion-label>
       <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
   </ion-list>  
-  <button ion-button (click)="onSignUp()">Criar conta</button> 
+  <button class="create-button" (click)="onSignUp()">Criar conta</button> 
 </ion-content>  

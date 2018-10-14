@@ -1,15 +1,23 @@
 page-signup {
-    button{
-        border: 1px solid #fff;
-        background: #2a3b71;
-        color: #fff;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin-top: 0px;
-        margin-bottom: 15px;
-        width: 100%;
-        font-size: 14px;
-        border-radius: 5px;
-        font-family: 'Montserrat' !important;
+    .create-button{
+            border:1px solid #fff;
+            background: #2a3b71;
+            color:#fff;
+            padding-top: 20px;
+            padding-bottom:20px;
+            margin-top:0px;
+            margin-bottom: 15px;
+            width:100%;
+            font-size:14px;
+            border-radius:5px;
+            font-family: 'Montserrat' !important;
+    }
+
+    .no-scroll .scroll-content{
+        overflow: hidden !important;
+    }
+
+    .item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+        color:#2a3b71;
     }
 }

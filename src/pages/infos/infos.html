@@ -8,10 +8,12 @@
 
 
 <ion-content padding>
+
   <ion-list>
+
     <ion-item>
-      <ion-label fixed>Nome</ion-label><br>
-      <ion-select type="text" [(ngModel)]="vacina.name">
+      <ion-label stacked>Vacina</ion-label>
+      <ion-select placeholder="Selecione a vacina" type="text" [(ngModel)]="vacina.name">
         <ion-option value="BCG">BCG</ion-option>
         <ion-option value="Hepatite B">Hepatite B</ion-option>
         <ion-option value="Penta/DTP">Penta/DTP</ion-option>
@@ -32,15 +34,20 @@
     </ion-item>
 
     <ion-item>
-      <ion-label fixed>Data</ion-label><br>
-      <ion-datetime displayFormat="DD/MM/YYYY" type="text" [(ngModel)]="vacina.date" required></ion-datetime>
+      <ion-label stacked>Data de aplicação</ion-label>
+      <ion-datetime placeholder="Informe a data de aplicação" displayFormat="DD/MM/YYYY" type="text" [(ngModel)]="vacina.date" required></ion-datetime>
     </ion-item>
 
-    <ion-item>
-      <ion-label fixed>Local</ion-label><br>
-      <ion-input type="text" [(ngModel)]="vacina.place"  required></ion-input>    
-    </ion-item>    
+      <ion-item>
+        <ion-label stacked>Unidade de saúde</ion-label>
+        <ion-select placeholder="Selecione a unidade de saúde" type="text" [(ngModel)]="vacina.place"  required>
+          <ion-option value="Posto de saúde A">Posto de saúde A</ion-option>
+          <ion-option value="Posto de saúde B">Posto de saúde B</ion-option>
+          <ion-option value="Posto de saúde C">Posto de saúde C</ion-option>
+        </ion-select>    
+      </ion-item>
+
+      <ion-col><button ion-button class="btn-save" (tap)="saveVacina()" >Autenticar</button></ion-col>
   </ion-list>
-  <ion-col><button ion-button class="btn-save" (tap)="saveVacina()" >Salvar</button></ion-col>
-  
+
 </ion-content>

@@ -100,3 +100,7 @@ ion-navbar h1 {
     padding-bottom: 10px;
     padding-left: 12%;
 }
+
+.no-scroll .scroll-content{
+    overflow: hidden !important;
+}
